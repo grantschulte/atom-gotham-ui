@@ -10,17 +10,43 @@
 // Try to edit some of the values below to see your theme change.
 // A good start is to change the color of the `@base-background-color` variable.
 
+/*
+ * Gotham Colors via gotham-syntax theme
+ */
+
+@base0: #0c1014;
+@base1: #11151c;
+@base2: #091f2e;
+@base3: #0a3749;
+@base4: #245361;
+@base5: #599cab;
+@base6: #99d1ce;
+@base7: #d3ebe9;
+
+@very-light-gray: #c5c8c6;
+@light-gray: #969896;
+@gray: #373b41;
+@dark-gray: #0c1014;
+
+@cyan: #33859E;
+@blue: #195466;
+@purple: #4e5166;
+@green: #2aa889;
+@red: #c23127;
+@orange: #d26937;
+@light-orange: #edb443;
+@magenta: #888ca6;
 
 // Text Colors
-@text-color:           hsl(0,0%,66%);
+@text-color:           @green;
 @text-color-subtle:    hsl(0,0%,50%);
 @text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color-selected:  @magenta;
 
-@text-color-info:    hsl(219,  79%, 66%);
-@text-color-success: hsl(140,  44%, 62%);
-@text-color-warning: hsl( 36,  60%, 72%);
-@text-color-error:   hsl(  9, 100%, 64%);
+@text-color-info:    @purple;
+@text-color-success: @green;
+@text-color-warning: @light-orange;
+@text-color-error:   @red;
 
 // Background colors
 @background-color-info:    hsl(208, 100%, 50%);
@@ -29,12 +55,12 @@
 @background-color-error:   hsl(0,    70%, 50%);
 
 @background-color-highlight: lighten(@base-background-color, 5%);
-@background-color-selected:  lighten(@base-background-color, 10%);
+@background-color-selected:  lighten(@base-background-color, 8%);
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: @base1;
+@base-border-color:     @base0;
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -63,8 +89,8 @@
 @tab-bar-background-color:    @base-background-color;
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
-@tab-border-color:            @base-border-color;
+@tab-background-color-active: lighten(@tab-bar-background-color, 7%);
+@tab-border-color:            @base0;
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;

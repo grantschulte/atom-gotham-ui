@@ -16,6 +16,7 @@
     font-size: @font-size;
     border-right: 1px solid @tab-border-color;
     background-color: @tab-background-color;
+    border-radius: 4px 4px 0 0;
     &.active {
       color: @text-color-selected;
       background-color: @tab-background-color-active;
@@ -49,7 +50,7 @@
       background: darken(@tab-background-color, 10%);
       border-color: transparent;
       opacity: .5;
-      & .close-icon {
+      &.close-icon {
         visibility: hidden;
       }
     }
