@@ -2,65 +2,52 @@
 // UI Variables
 // -------------------
 
-// These are the official UI variables that every UI theme should define.
-// It allows other packages to match your theme.
+// Gotham colors taken from gotham.vim by Andrea Leopardi
+// https://github.com/whatyouhide/vim-gotham
 
-// Overrides: atom/static/variables/ui-variables.less
+@gotham-base0: #0c1014;
+@gotham-base1: #11151c;
+@gotham-base2: #091f2e;
+@gotham-base3: #0a3749;
+@gotham-base4: #245361;
+@gotham-base5: #599cab;
+@gotham-base6: #99d1ce;
+@gotham-base7: #d3ebe9;
 
-// Try to edit some of the values below to see your theme change.
-// A good start is to change the color of the `@base-background-color` variable.
-
-/*
- * Gotham Colors via gotham-syntax theme
- */
-
-@base0: #0c1014;
-@base1: #11151c;
-@base2: #091f2e;
-@base3: #0a3749;
-@base4: #245361;
-@base5: #599cab;
-@base6: #99d1ce;
-@base7: #d3ebe9;
-
-@very-light-gray: #c5c8c6;
-@light-gray: #969896;
-@gray: #373b41;
-@dark-gray: #0c1014;
-
-@cyan: #33859E;
-@blue: #195466;
-@purple: #4e5166;
-@green: #2aa889;
-@red: #c23127;
-@orange: #d26937;
-@light-orange: #edb443;
-@magenta: #888ca6;
+// @gotham-white:    #F9F9F9;
+@gotham-cyan:     #33859E;
+@gotham-blue:     #195466;
+@gotham-violet:   #4e5166;
+@gotham-green:    #2aa889;
+@gotham-red:      #c23127;
+@gotham-orange:   #d26937;
+@gotham-yellow:   #edb443;
+@gotham-magenta:  #888ca6;
 
 // Text Colors
-@text-color:           @cyan;
-@text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  @green;
+@text-color:           lighten(@gotham-magenta, 10%);
+@text-color-subtle:    lighten(@gotham-magenta, 15%);
+@text-color-highlight: lighten(@gotham-magenta, 20%);
+@text-color-selected:  lighten(@gotham-magenta, 25%);
 
-@text-color-info:    @purple;
-@text-color-success: @green;
-@text-color-warning: @light-orange;
-@text-color-error:   @red;
+@text-color-info:    @gotham-cyan;
+@text-color-success: @gotham-green;
+@text-color-warning: @gotham-orange;
+@text-color-error:   @gotham-red;
 
 // Background colors
-@background-color-info:    hsl(208, 100%, 50%);
-@background-color-success: hsl(160,  70%, 36%);
-@background-color-warning: hsl(32,   60%, 50%);
-@background-color-error:   hsl(0,    70%, 50%);
+@background-color-info:    @gotham-cyan;
+@background-color-success: @gotham-green;
+@background-color-warning: @gotham-orange;
+@background-color-error:   @gotham-red;
 
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 8%);
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: @base1;
-@base-border-color:     @base0;
+@base-background-color: @gotham-base1;
+@base-border-color:     @gotham-base0;
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -90,30 +77,32 @@
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
 @tab-background-color-active: lighten(@tab-bar-background-color, 7%);
-@tab-border-color:            @base0;
+@tab-border-color:            @base-border-color;
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;
+@tree-view-file-modified:    @text-color-success;
+@tree-view-file:             @text-color;
 
 // Site colors
-@ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
-@ui-site-color-3: hsl(32,   60%, 50%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
+@ui-site-color-1: @gotham-blue;
+@ui-site-color-2: @gotham-green;
+@ui-site-color-3: @gotham-orange;
+@ui-site-color-4: @gotham-violet;
+@ui-site-color-5: @gotham-yellow;
 
 // Sizes
-@font-size: 12px;
+@font-size:       12px;
 @input-font-size: 14px;
 
 @disclosure-arrow-size: 12px;
 
-@component-padding: 10px;
+@component-padding:     10px;
 @component-icon-padding: 5px;
-@component-icon-size: 16px;
+@component-icon-size:   16px;
 @component-line-height: 25px;
 
-@tab-height: 30px;
+@tab-height: 40px;
 
 // Misc
 @component-border-radius: 2px;

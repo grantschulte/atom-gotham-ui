@@ -4,15 +4,33 @@
 
 // Used to color git status
 
-.status          { color: @text-color; }
-.status-added    { color: @text-color-success; } // green
-.status-ignored  { color: @text-color-subtle; }  // faded
-.status-modified { color: @text-color-warning; } // orange
-.status-removed  { color: @text-color-error; }   // red
-.status-renamed  { color: @text-color-info; }    // blue
+// .status          { color: @text-color; }
+// .status-added    { color: @text-color-success; } // green
+// .status-ignored  { color: @text-color-subtle; }  // faded
+.status-modified { color: @text-color-success; } // orange
+// .status-removed  { color: @text-color-error; }   // red
+// .status-renamed  { color: @text-color-info; }    // blue
 
-.git-line-added    { border-color: @text-color-success; } // green
-// .git-line-ignored  { color: @text-color-subtle; }  // faded
-.git-line-modified { border-color: @text-color-warning; } // orange
-// .git-line-removed  { color: @text-color-error; }   // red
-// .git-line-renamed  { color: @text-color-info; }    // blue
+atom-text-editor {
+  .gutter .line-number {
+    &.git-line-added {
+      border-color: @gotham-green;
+    }
+
+    &.git-line-ignored {
+      border-color: @gotham-magenta;
+    }
+
+    &.git-line-modified {
+      border-color: @gotham-cyan;
+    }
+
+    &.git-line-removed {
+      border-color: @gotham-red;
+    }
+
+    &.git-line-renamed {
+      border-color: @gotham-violet;
+    }
+  }
+}
